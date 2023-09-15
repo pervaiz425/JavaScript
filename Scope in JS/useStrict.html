@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict"; //use strict mode to avoid global scope pollution
+      //gb = "100 Mb";  This will throw an error because gb is not defined with var, let or const
+      var gb = "100 Mb"; //This will not throw an error because gb is defined with var
+
+      function Check()
+      {
+           var num = 55;
+      }
+       //var does not have block-level scope
+      console.log(num); //This will throw an error because num is a local variable and it is not accessible outside the function
+
+      for(var i = 0, i < 10, i++)
+      {
+          console.log(i); //This will print 0 to 9
+      }
+
+      console.log(i); /*This will print 10 because i has a function scope and it is global variable
+      and it is accessible outside the for loop*/
+      /*Let me explain how i is a global variable. When we use var keyword to declare a variable,
+      it is accessible outside the function in which it is declared. But when we use let keyword
+      to declare a variable, it is not accessible outside the block in which it is declared. For example:*/
+
+      for(let remem = 0, remem < 10, remem++)
+      {s
+          console.log(z); //This will print 0 to 9
+      }
+    </script>
+  </body>
+</html>

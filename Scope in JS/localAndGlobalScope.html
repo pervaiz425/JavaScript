@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Testing Scope in JS</h1>
+
+    <script>
+      var aVariable = "Hello, I am a global variable"; //This is a global variable
+      function testScope() {
+        var scope = "Hello, I am Umar"; //This is a local variable
+      }
+
+      console.log(aVariable); //This will print the global variable
+      console.log(scope); //This will give an error because scope is a local variable and it is not accessible outside the function
+    </script>
+  </body>
+</html>

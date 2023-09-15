@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Dom Examples</h1>
+    <div class="testClass">
+      <p id="testClasspara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+        deserunt.
+      </p>
+    </div>
+
+    <script>
+          var myText =  document.querySelector(".testClass #testClasspara");
+            myText.style.fontSize= "25px";
+
+      //querySelector method just like getElementById, but it's a little bit more flexible.
+      //querySelector allows us to use CSS selectors to find elements on the page.
+      //querySelector is a method of the document object.
+      //quertSelector take first element that matches the selector.
+    </script>
+  </body>
+</html>

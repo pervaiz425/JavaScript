@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myElement">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    </div>
+
+    <script>
+        //Getting Class Name
+        var myElement = document.querySelector(".myElement");
+        console.log(myElement.className)
+        
+        //Setting the Class Attribute Value
+        document.querySelector(".myElement").className = "myNewClass";
+        console.log(document.querySelector(".myNewClass").className);
+
+        //Adding a Class
+        var myelement = document.querySelector(".myElement");
+        myElement.classList.add("myNewClass1");
+        console.log(myElement.className)
+
+        //Removing a Class
+        var my_element = document.querySelector(".myElement");
+        //myElement.classList.remove("myNewClass");
+        myElement.className = myElement.className.replace("myNewClass", "");
+        console.log(myElement.className)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://google.com/" id="link">Google</a>
+
+    <script>
+            document.querySelector("#link").addEventListener("click", function (event) {
+              event.preventDefault();
+              alert("Denied Permission to Access Google");
+            });
+
+      /* This method is used to prevent the default behavior
+      associated with an event. In web development, many HTML
+      elements have default behaviors associated with certain
+      events. For example, when you submit a form, the default
+      behavior is to send a request to the server and reload
+      the page. By calling event.preventDefault(), you can stop
+      this default behavior from happening.*/
+    </script>
+  </body>
+</html>

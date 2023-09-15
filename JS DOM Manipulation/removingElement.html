@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DOM Examples</h1>
+    <div class="myDiv">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing. 1</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing. 2</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing. 3</p>
+    </div>
+
+    <script>
+      //Removing an Element
+      document
+        .querySelector(".myDiv")
+        .removeChild(document.querySelector(".myDiv").children[2]);
+      //We can also remove the element by using the remove method.
+      //document.querySelector(".myDiv").children[2].remove();
+      const paragraphs = document.querySelectorAll("p");
+      // paragraphs[0] is the first <p> element
+      // paragraphs[1] is the second <p> element, etc.
+      alert(paragraphs[0].nodeName);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Ever Test Document</title>
+</head>
+
+<body>
+    <p id="simple_text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptatem vero odio, aspernatur corrupti
+        fuga.
+    </p>
+    <script>
+        document.getElementById("simple_text").style.color = "red";
+    </script>
+</body>
+
+</html>
+
+<!-- When the page loaded, JavaScript loaded the paragraph the way I wrote it, 
+    and then what the scripted is it went in and found that element with the ID 
+    of one, and it added the style attribute here and set its color property to red. 
+    JavaScript is doing that on the fly after the page has been retrieved. Right now 
+    we're just loading it from our desktop. But you could be getting it off of the 
+    webserver, you'd be getting it from anywhere. That page, when it gets to the 
+    browser, it gets rendered by the browser and then the script runs down at the 
+    bottom of the page and affects the page after that paragraph has already been 
+    rendered. It happens so fast, you don't even really see it. But this is a 
+    really great example of a document method, getElementById, which is allowing 
+    us to go into our document, find that ID, and then effect it on the page. -->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>IIFE Use</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+    <script>
+      //Never Use Global Scope
+      (function () {
+        var iifeTest = document.getElementsByTagName("p"); //This is a local variable now
+        for (var i = 0; i < iifeTest.length; i++) {
+          iifeTest[i].style.color = "red";
+        }
+        console.log(iifeTest); //This will print the local variable of type HTMLCollection
+
+        function privateFunction() {
+          return "This is a private function.";
+        }
+        console.log(privateFunction()); //This will print the private function
+      })();
+
+      //IIFE is used to avoid global scope pollution
+    </script>
+  </body>
+</html>

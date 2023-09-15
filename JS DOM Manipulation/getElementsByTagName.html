@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 2</title>
+</head>
+
+<body>
+    <h1>Doom Examples</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <script>
+        var tempStore = document.getElementsByTagName("p");
+        console.log(tempStore);
+        for (var i = 0; i < tempStore.length; i++) {
+            tempStore[i].style.color = "blue";
+            alert(`This is Element ${i}`)
+        }
+    </script>
+</body>
+
+</html>

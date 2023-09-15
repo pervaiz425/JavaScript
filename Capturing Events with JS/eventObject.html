@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Events Capturing in JS</h1>
+    <button>Don't Click here</button>
+
+    <script>
+      var myButton = document.querySelector("button");
+      myButton.onclick = function () {
+        alert("You clicked me");
+      };
+
+      /* 
+        The above code will work fine but if we want to add 
+        another event listener to the button then the previous 
+        event listener will be overwritten by the new one.
+        To avoid this we can use addEventListener() method.
+      */
+      /*Here is the demonstration of addEventListener() method*/
+      myButton.addEventListener("click", function (event) {
+        event.target.style.backgroundColor = "red";
+        alert("You clicked me again");
+      });
+
+    </script>
+  </body>
+</html>

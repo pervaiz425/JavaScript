@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="myTable">
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+      </tr>
+      <tr>
+        <td>Row 1, Cell 1</td>
+        <td>Row 1, Cell 2</td>
+      </tr>
+      <tr>
+        <td>Row 2, Cell 1</td>
+        <td>Row 2, Cell 2</td>
+      </tr>
+    </table>
+
+    <button id="addCenterColumnBtn">Add Column in Center</button>
+
+    <script>
+      // Get references to the table and the button
+      var table = document.getElementById("myTable");
+      var addCenterColumnButton = document.getElementById("addCenterColumnBtn");
+
+      // Function to add a new column in the center of the table
+      function addColumnInCenter() {
+        // Loop through the rows and add new cells in the desired position
+        for (var i = 0; i < table.rows.length; i++) {
+          var newRowCell = table.rows[i].insertCell(1); // Insert cell in the center
+          newRowCell.textContent = "New Center Column";
+        }
+      }
+
+      // Add an event listener to the button
+      addCenterColumnButton.addEventListener("click", addColumnInCenter);
+    </script>
+  </body>
+</html>

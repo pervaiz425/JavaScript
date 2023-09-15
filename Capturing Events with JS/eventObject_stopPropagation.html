@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <button id="child">Click me</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("child")
+        .addEventListener("click", function (event) {
+          alert("Button clicked");
+          event.stopPropagation(); // Prevent the click event from reaching the parent
+        });
+
+      document
+        .getElementById("parent")
+        .addEventListener("click", function (event) {
+          alert("Parent div clicked");
+        });
+
+/* This method is used to stop an event from propagating 
+up or down the DOM tree. When an event occurs on an 
+element, it typically "bubbles" up the DOM tree, triggering 
+event handlers on ancestor elements as it goes. Calling 
+event.stopPropagation() prevents this propagation, which 
+can be useful when you don't want parent elements to react 
+to the same event.*/
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom Examples</h1>
+    <div>
+        <p>This is the first Paragraph</p>
+    </div>
+
+    <script>
+        var myTag = document.createElement("p");
+        var myText = document.createTextNode("This is the second Paragraph");
+        myTag.appendChild(myText);
+        document.querySelector("div").appendChild(myTag);
+
+        /*In JavaScript, the createElement method is used to 
+        create a new HTML element in the Document Object Model 
+        (DOM). This method is typically used when you want to
+        dynamically create HTML elements and add them to your
+        web page.*/
+    </script>
+</body>
+</html>

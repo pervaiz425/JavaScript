@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //This is a simple demonstration of event target
+      // Get a reference to the Window (the browser window)
+      const browserWindow = window;
+
+      // Add an event listener to the Window
+      browserWindow.addEventListener("resize", function () {
+        // This function runs when the event (window resizing) occurs
+        // Adjust the content layout here
+        alert("Window resized not allowed");
+      });
+        //The event target is window here
+    </script>
+  </body>
+</html>

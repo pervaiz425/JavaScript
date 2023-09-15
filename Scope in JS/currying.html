@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // A normal (non-curried) function that takes two arguments and adds them
+      function add(x, y) {
+        return x + y;
+      }
+
+      // Using currying to create a series of functions that each take one argument
+      function curriedAdd(x) {
+        return function (y) {
+          return x + y;
+        };
+      }
+
+      // Using the curriedAdd function
+      const add5 = curriedAdd(5); // Partially apply with 5
+      console.log(add5(10)); // Outputs 15 (5 + 10)
+
+      // Alternatively, you can call it in one line:
+      console.log(curriedAdd(5)(10)); // Outputs 15
+    </script>
+  </body>
+</html>
+       

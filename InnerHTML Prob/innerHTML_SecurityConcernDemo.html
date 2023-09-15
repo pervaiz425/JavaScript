@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Page</title>
+</head>
+<body>
+    <div id="comments"></div>
+    <form id="commentForm">
+        <input type="text" id="commentInput" placeholder="Write a comment">
+        <button type="button" onclick="addComment()">Submit</button>
+    </form>
+    <p>Lorem ipsum dolor sit amet.
+        <script>
+        
+        </script>
+    </p>
+    <script>
+        function addComment() {
+            var comment = document.getElementById("commentInput").value;
+            var commentsDiv = document.getElementById("comments");
+            commentsDiv.innerHTML += '<p>' + comment + '</p>';
+        }
+    </script>
+</body>
+</html>
