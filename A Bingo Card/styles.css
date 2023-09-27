@@ -1,0 +1,41 @@
+body{
+    background-color: white;
+    color: black;
+    font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h2,th{
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h2{
+    font-size: 28px;
+    text-align: center; 
+}
+
+table{
+    border-collapse: collapse;
+    position: relative;
+    left: 218px;
+}
+
+th,td{
+    padding: 10px;
+    margin: 50px;
+    border: 2px #666 solid;
+    text-align: center;
+    width: 20%;
+}
+
+p{
+    text-align: center;
+}
+
+#free, .pickedBG{
+    background-color: #f66;
+}
+
+/* .winningBG{
+    background-image: ;
+} */

@@ -19,14 +19,23 @@ const myHonda = {
   
 
 //We can also make objects using constructor functions.
-  function Car55(make, model, year) {
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.method = function(){
-        console.log("This is method");
+  
+    function Car55(make, model, year) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.method = function(){
+          console.log("This is method");
+      }
+      // function noBinding()
+      // {
+      //   console.log("I am not bound to any object");
+      // }
+      // noBinding();
+      //I cannot call the noBinding() directly on the Car5 object. 
+      //I can only call it inside the Car5 constructor function.
+      //and noBinding() is not binded to the global scope because it is local to the Car55
     }
-  }
 
     const car1 = new Car55('Eagle', 'Talon TSi', 1993);
     console.log(car1.make);  // expected output: "Eagle"
@@ -49,6 +58,13 @@ const myHonda = {
     //a name (or key) and a value. A property's value can be a function, in which case the 
     //property is known as a method.
     console.log(obj);
+    const object3 = Object(obj);
+    //when we create a new object using either the Object.create() method or the Object() constructor function,
+    //the new object will behave like a reference to the object which is used to create the new object.
+    console.log(object3);
+    object3.price = 500000;
+    console.log(obj);
+    console.log(object3);
     const obj2 = new Object();
 
     //we can use the const obj2 = Object(obj), it will make the obj2 object as the copy of obj object. Unlike
@@ -58,11 +74,10 @@ const myHonda = {
     delete obj2.__proto__.price;
     console.log(obj2);
     console.log(obj2.price); 
-    console.log(obj2.price);
-    console.log(obj2);
+    console.log(obj);
+   
     //Now we can see that the price is deleted from obj2 as well.
  
-
     //Let's see how to delete the property from the Object in case of Constructor Functions
     function Car(wheels, price, name)
     {
@@ -136,6 +151,7 @@ const myHonda = {
         console.log("Hello, my name is " + this.name);
     };
 
+    console.log(Person);
     console.log(Person.prototype);  //Person.prototype is the prototype object of the Person constructor function.
     console.log(Person.__proto__); 
     
@@ -160,37 +176,39 @@ const myHonda = {
 
 
     // Define a Person prototype
-function Person(name) {
+function person(name) {
     this.name = name;
   }
   
   // Add a common method to the Person prototype
-  Person.prototype.introduce = function () {
+  person.prototype.introduce = function () {
     console.log(`Hi, I'm ${this.name}`);
   }
   
   // Create a Professor object inheriting from Person
   function Professor(name, subject) {
-    Person.call(this, name); // Call the constructor of the Person prototype
+    person.call(this, name); // Call the constructor of the Person prototype
     this.subject = subject;
   }
   
   // Set up the inheritance relationship
   Professor.prototype = Object.create(Person.prototype);
-  
+  console.log(Person.prototype);
+  console.log(Professor.prototype);
   // Add a method specific to Professors
   Professor.prototype.teach = function () {
     console.log(`${this.name} teaches ${this.subject}`);
   }
-  
-  // Create a Student object inheriting from Person
+
+  // Create a Student object inheriting from Personn
   function Student(name, grade) {
-    Person.call(this, name); // Call the constructor of the Person prototype
+    person.call(this, name); // Call the constructor of the Person prototype
     this.grade = grade;
   }
   
   // Set up the inheritance relationship
-  Student.prototype = Object.create(Person.prototype);
+  Student.prototype = Object.create(person.prototype);
+  console.log(Student.prototype);
   
   // Add a method specific to Students
   Student.prototype.study = function () {
